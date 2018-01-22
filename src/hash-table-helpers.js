@@ -1,3 +1,5 @@
+const LinkedList = require('./hash-table-helpers2');
+
 // A special array class that can only store the number of items specified by the `limit` argument
 class LimitedArray {
   constructor(limit) {
