@@ -1,27 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable class-methods-use-this */
 
-/*
-Full Disclosure:  This is completely broken.  The notes don't necessarily match up because I made the
-notes on the original code and then tried to change it to implement the linked list (with terrible execution).  After
-hours of breaking this code I've come to the realization that I won't be able to do this at my current understanding.
-I started to hit undo repeatedly (I suppose this is why commits are preferable...) to get back to a point where I hadn't
-demolished it and realized I had just confused myself more.
-
-Conceptually, and at what I assume is a basic level, I understand how both a hash table and a linked list are formed.  One is a
-table based on a hashed key with indexed buckets holding a list of values, either via an array or a linked list (and I'm sure other
-data types).  A linked list is an object with a head and tail reference; it holds nodes that are comprised of data and a pointer
-to the next node object.
-
-I think (emphasis on the I, this (a) may not actually be the case, and (b) may only be the case for me) the assignment
-would have been better if it had just been "create a hash table with buckets made of linked lists from scratch" because transforming
-one to the other just confused me to no end.  Had I not struggled with this for hours, I may have tried this, but I thought that
-would defeat the purpose of the sprint challenge.  Not to mention, when reading over the channels for a clue as to what I was doing
-so wrong, an instructor said at some point that you shouldn't spend more than 4 hours on this and I'm far passed that.
-
-I realize we weren't expected to do this perfectly, but if this was a pass/fail type of thing, there is no doubt into which this would
-fall...
-*/
 const { LimitedArray, getIndexBelowMax } = require('./hash-table-helpers');
 const LinkedList = require('./hash-table-helpers2');
 
@@ -32,7 +11,6 @@ class HashTable {
     // Do not modify anything inside of the constructor
   }
 
-  // presumably don't need to touch this
   resize() {
     // doubles the original limit
     this.limit *= 2;
@@ -52,7 +30,6 @@ class HashTable {
     });
   }
 
-  // presumably don't need to touch this
   capacityIsFull() {
     let fullCells = 0;
 
